@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculum Vitae - Pille Hansar</title>
+  <title>Curriculum Vitae - <%= profile.nimi %> <%= profile.perekonnanimi %></title>
   <style>
     body {
       background-color: #fff8ee;
@@ -131,12 +131,12 @@
 
   <div class="cv-container">
     <div class="header">
-      <img src="Images/1.jpg" alt="Pille Hansar" class="profile-img">
+      <img src="/Images/1.jpg" alt="<%= profile.nimi %> <%= profile.perekonnanimi %>" class="profile-img">
       <div class="header-content">
         <h1>Curriculum Vitae</h1>
 
         <div class="subtitle">
-          by <span id="nimi"></span> <span id="perekonnanimi"></span>
+          by <%= profile.nimi %> <%= profile.perekonnanimi %>
         </div>
         
         <div class="top-icons">
@@ -148,28 +148,29 @@
     </div>
 
     <h2>Description</h2>
-    <p>I am a motivated and responsible person who learns quickly and works well both independently and as part of a team. I am a good communicator with a positive attitude and a strong willingness to learn and develop new skills. I am looking for an opportunity where I can contribute to the team, gain valuable experience, and grow professionally.</p>
+    <p><%= profile.description %></p>
 
     <h2>Personal information</h2>
-    <p>Age: <span id="vanus"></span></p>
-    <p>Email: <span id="email"></span></p>
+    <p>Age: <%= profile.vanus %></p>
+    <p>Email: <%= profile.email %></p>
 
     <h2>Education</h2>
     <h3>Schools</h3>
-    <p>Kiviõli 1. Keskkool-studied- graduated Middle School</p>
-    <p>Tartu Vocational College-studied Warehouse worker-graduated</p>
-    <p>TTK University of Applied Sciences-studying Transport and Logistics</p>
+    <% profile.education.forEach((item) => { %>
+      <p><%= item %></p>
+    <% }); %>
 
     <h2>Work experience</h2>
-    <p>Warehouse worker- at Bauhof, 5months</p>
-    <p>Warehouse worker- at Onninen, 9 months</p>
-    <p>Logistician- at Amicum Logistics OÜ, 5 months</p>
+    <% profile.workExperience.forEach((item) => { %>
+      <p><%= item %></p>
+    <% }); %>
 
     <hr class="divider">
 
     <h2>Qualifications</h2>
-    <p>Strong communication and interpersonal skills</p>
-    <p>Reliable, responsible, and hardworking</p>
+    <% profile.qualifications.forEach((item) => { %>
+      <p><%= item %></p>
+    <% }); %>
 
     <hr class="divider">
 
@@ -185,7 +186,7 @@
     <footer>2026 ©</footer>
   </div>
 
-  <script src="profile.js"></script>
+  <script src="/profile.js"></script>
 
 </body>
 </html>

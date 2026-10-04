@@ -2,5 +2,20 @@
   "nimi": "Pille",
   "perekonnanimi": "Hansar",
   "vanus": 21,
-  "email": "pille@example.com"
+  "email": "pille@example.com",
+  "description": "I am a motivated and responsible person who learns quickly and works well both independently and as part of a team. I am a good communicator with a positive attitude and a strong willingness to learn and develop new skills. I am looking for an opportunity where I can contribute to the team, gain valuable experience, and grow professionally.",
+  "education": [
+    "Kiviõli 1. Keskkool - studied and graduated from middle school",
+    "Tartu Vocational College - studied warehouse work and graduated",
+    "TTK University of Applied Sciences - studying Transport and Logistics"
+  ],
+  "workExperience": [
+    "Warehouse worker at Bauhof - 5 months",
+    "Warehouse worker at Onninen - 9 months",
+    "Logistician at Amicum Logistics OÜ - 5 months"
+  ],
+  "qualifications": [
+    "Strong communication and interpersonal skills",
+    "Reliable, responsible, and hardworking"
+  ]
 }
